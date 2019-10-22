@@ -1,0 +1,34 @@
+  <ion-content fullscreen color="secondary">
+    <ion-card-content >
+<ion-item>
+<ion-label>Nama:</ion-label>
+  <ion-input placeholder=""></ion-input>
+</ion-item>
+<ion-item>
+   <ion-label>Alamat:</ion-label>
+<ion-input placeholder=""></ion-input>
+</ion-item>
+
+
+<!-- Checkboxes in a List -->
+<ion-list>
+  <ion-item *ngFor="let entry of form">
+    <ion-label>{{entry.val}}</ion-label>
+    <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+  </ion-item>
+</ion-list>
+
+<ion-item>
+  <ion-label position="floating">Tanggal</ion-label>
+  <ion-datetime displayFormat="MM/DD/YYYY" value=""></ion-datetime>
+</ion-item>
+
+<ion-item>
+    <ion-label>Kerusakan:</ion-label>
+ <ion-input placeholder=""></ion-input>
+ </ion-item>
+</ion-card-content>
+</ion-content>
+<ion-button href="/list">SUBMIT</ion-button>
+<ion-button href="/home">BACK</ion-button>
+
