@@ -1,16 +1,17 @@
-  <ion-content fullscreen color="secondary">
-    <ion-card-content >
+  <ion-content color="secondary">
+    <ion-card-content fullscreen>
+        <ion-header><ion-title>
+            SERVICE
+          </ion-title></ion-header>
 <ion-item>
-<ion-label>Nama:</ion-label>
+  <ion-label>Nama     :</ion-label>
   <ion-input placeholder=""></ion-input>
 </ion-item>
 <ion-item>
-   <ion-label>Alamat:</ion-label>
+   <ion-label>Alamat   :</ion-label>
 <ion-input placeholder=""></ion-input>
 </ion-item>
 
-
-<!-- Checkboxes in a List -->
 <ion-list>
   <ion-item *ngFor="let entry of form">
     <ion-label>{{entry.val}}</ion-label>
@@ -19,14 +20,21 @@
 </ion-list>
 
 <ion-item>
-  <ion-label position="floating">Tanggal</ion-label>
-  <ion-datetime displayFormat="MM/DD/YYYY" value=""></ion-datetime>
+  <ion-label position="floating">Tanggal   :</ion-label>
+  <ion-datetime displayFormat="MM/DD/YYYY" min="2000-09-14" max="2025-10-28"></ion-datetime>
 </ion-item>
-
 <ion-item>
-    <ion-label>Kerusakan:</ion-label>
+  <ion-label>Jumlah    :</ion-label>
+<ion-input placeholder=""></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label>Kerusakan :</ion-label>
  <ion-input placeholder=""></ion-input>
  </ion-item>
+ <ion-item>
+  <ion-label>No. HP  :</ion-label>
+<ion-input placeholder=""></ion-input>
+</ion-item>
 </ion-card-content>
 </ion-content>
 <ion-button href="/list">SUBMIT</ion-button>

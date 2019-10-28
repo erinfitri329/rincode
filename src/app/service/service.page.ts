@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class ServicePage {
   public form = [
       { val: 'LAPTOP/HP', isChecked: false },
-      { val: 'MESIN CUCI', isChecked: false },
-      { val: 'ALAT DAPUR', isChecked: false }
+      { val: 'PERABOT KAYU', isChecked: false },
+      { val: 'ALAT DAPUR', isChecked: false },
+      { val: 'ALAT ELEKTRONIK', isChecked: false }
     ];
 }
