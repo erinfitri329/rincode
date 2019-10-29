@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage{
 
-  constructor() { }
+  constructor(public loadingController: LoadingController) {}
 
-  ngOnInit() {
+  async presentLoadingWithOptions() {
+    const loading = await this.loadingController.create({
+      spinner: null,
+      duration: 5000,
+      message: 'Please wait...',
+      translucent: true,
+      cssClass: 'custom-class custom-loading'
+    });
+    return await loading.present();
   }
-
 }
