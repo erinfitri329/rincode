@@ -17,19 +17,24 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    },
-    {
-      title: 'Service',
+      title: 'Order',
       url: '/service',
       icon: 'cart'
+    },
+    {
+      title: 'Detail Service',
+      url: '/list',
+      icon: 'list'
     },
     {
       title: 'Account',
       url: '/account',
       icon: 'contact'
+    },
+    {
+      title: 'Setting',
+      url: '/setting',
+      icon: 'settings'
     }
   ];
 

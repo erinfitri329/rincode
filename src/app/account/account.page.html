@@ -1,12 +1,49 @@
-<ion-content color="secondary">
-    <ion-card-content fullscreen>
-        <ion-header><ion-title>
-            YOUR ACCOUNT
-          </ion-title></ion-header>
-
- <ion-card class="welcome-card">
-    <img src="/assets/akun.png" alt="" />
- </ion-card>
- </ion-card-content>
- </ion-content>
- <ion-button href="/home">BACK</ion-button>
+<ion-header>
+        <ion-toolbar color="primary">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+            <ion-toolbar class="order" color="primary">
+                <ion-title>YOUR ACCOUNT</ion-title>
+              </ion-toolbar>
+          </ion-buttons>
+              
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="secondary">
+      <ion-card-content>  
+                    <ion-card class="welcome-card" color="secondary">
+                        <p><img src="/assets/akun.png" alt="" /></p>
+                        <ion-label color="dark"><p>Erin Fitri Aknorita<p></p>
+                            <p>0917040045</p>
+                        </ion-label>
+                        </ion-card>
+        </ion-card-content>
+        <ion-card>
+        <ion-list>
+            <ion-item (click)="buttonClick()" detail color="primary">
+                <ion-label>
+                   Profil Saya
+                </ion-label>
+            </ion-item>
+            <ion-item (click)="buttonClick()" detail color="primary">
+                    <ion-label>
+                    Point
+                    </ion-label>
+                </ion-item>
+            <ion-item (click)="buttonClick()" detail color="primary">
+                    <ion-label>
+                    Reward
+                    </ion-label>
+                </ion-item>
+            <ion-item (click)="buttonClick()" detail color="primary">
+                   <ion-label>
+                     Riwayat Service
+                   </ion-label>
+               </ion-item>
+              
+        </ion-list>
+    </ion-card>
+    <div class="center">
+            <ion-button shape="round" href="/login">LOGOUT</ion-button>
+            </div>
+</ion-content>

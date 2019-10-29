@@ -1,8 +1,16 @@
-  <ion-content color="secondary">
-    <ion-card-content fullscreen>
-        <ion-header><ion-title>
-            SERVICE
-          </ion-title></ion-header>
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+        <ion-toolbar class="order" color="primary">
+            <ion-title>ORDER</ion-title>
+          </ion-toolbar>
+      </ion-buttons>
+          
+    </ion-toolbar>
+  </ion-header>
+<ion-content color="secondary">
+  <ion-card-content>
 <ion-item>
   <ion-label>Nama     :</ion-label>
   <ion-input placeholder=""></ion-input>
@@ -13,11 +21,45 @@
 </ion-item>
 
 <ion-list>
-  <ion-item *ngFor="let entry of form">
-    <ion-label>{{entry.val}}</ion-label>
-    <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
-  </ion-item>
-</ion-list>
+    <ion-list-header>Jenis Barang</ion-list-header>  
+    <ion-item>
+      <ion-label>GADGET</ion-label>
+      <ion-select okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="pc">PC</ion-select-option>
+        <ion-select-option value="laptop">Laptop</ion-select-option>
+        <ion-select-option value="hp">HP</ion-select-option>
+        <ion-select-option value="tab">Tab</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Barang Elektronik</ion-label>
+        <ion-select okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="ac">AC</ion-select-option>
+          <ion-select-option value="kipas">Kipas Angin</ion-select-option>
+          <ion-select-option value="sound">Sound</ion-select-option>
+          <ion-select-option value="tv">TV</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+          <ion-label>Perabot Kayu</ion-label>
+          <ion-select okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="lemari">Lemari</ion-select-option>
+            <ion-select-option value="kursi">Kursi</ion-select-option>
+            <ion-select-option value="meja">Meja</ion-select-option>
+            <ion-select-option value="rak_buku">Rak Buku</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Perabotan Dapur</ion-label>
+            <ion-select okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="kompor">Kompor</ion-select-option>
+              <ion-select-option value="heater">Heater</ion-select-option>
+              <ion-select-option value="blender">Blender</ion-select-option>
+              <ion-select-option value="mixer">Mixer</ion-select-option>
+            </ion-select>
+          </ion-item>
+  
+  </ion-list>
 
 <ion-item>
   <ion-label position="floating">Tanggal   :</ion-label>
@@ -36,7 +78,8 @@
 <ion-input placeholder=""></ion-input>
 </ion-item>
 </ion-card-content>
+<div class="center">
+<ion-button shape="round" href="/list">SUBMIT</ion-button>
+</div>
 </ion-content>
-<ion-button href="/list">SUBMIT</ion-button>
-<ion-button href="/home">BACK</ion-button>
 
